@@ -1,0 +1,13 @@
+res://interface/menu.tscn
+res://player/cenas/Tiro.tscn
+res://player/scripts/Tiro.gd
+res://player/cenas/Player.tscn
+res://player/scripts/Atirar.gd
+res://player/scripts/personagem.gd
+res://player/cenas/laser.tscn
+res://player/scripts/shooting.gd
+res://mundos/MundoTeste.tscn
+res://player/scripts/laser.gd
+res://meteoros/Meteoro.tscn
+res://meteoros/meteorovelo.gd
+res://mundos/MeteorOrigin.gd

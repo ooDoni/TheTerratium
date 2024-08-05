@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd6virlahlpv0"]
+
+[ext_resource type="Script" path="res://player/scripts/personagem.gd" id="1_misse"]
+[ext_resource type="Texture2D" uid="uid://drnbki68wnpve" path="res://player/sprites/Spaceship.png" id="2_wmil1"]
+[ext_resource type="Script" path="res://player/scripts/shooting.gd" id="3_qgaos"]
+[ext_resource type="PackedScene" uid="uid://g25k1kdxth" path="res://player/cenas/laser.tscn" id="4_vnvhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl1j6"]
+size = Vector2(102, 100)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_misse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_jl1j6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wmil1")
+
+[node name="ShotOrigin" type="Node2D" parent="."]
+position = Vector2(0, -61)
+script = ExtResource("3_qgaos")
+laser_scene = ExtResource("4_vnvhp")

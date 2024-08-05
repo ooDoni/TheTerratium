@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://g25k1kdxth"]
+
+[ext_resource type="Script" path="res://player/scripts/laser.gd" id="1_8udlw"]
+[ext_resource type="Texture2D" uid="uid://bsn3dqg2cjfnc" path="res://player/sprites/Tiro.jpg" id="2_wrsxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fxbb"]
+size = Vector2(44, 44)
+
+[node name="Laser" type="Area2D"]
+script = ExtResource("1_8udlw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.72205e-06, -5.72205e-06)
+scale = Vector2(0.116667, 0.116667)
+texture = ExtResource("2_wrsxa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8fxbb")
