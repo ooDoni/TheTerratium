@@ -1,3 +1,5 @@
+RichTextLabel
+CollisionShape2D
 Area2D
 ColorRect
 Node2D
