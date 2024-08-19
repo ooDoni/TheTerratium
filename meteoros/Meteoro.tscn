@@ -1,19 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3x82q7kcabtx"]
 
 [ext_resource type="Script" path="res://meteoros/meteorovelo.gd" id="1_qxts1"]
-[ext_resource type="Texture2D" uid="uid://bsn3dqg2cjfnc" path="res://player/sprites/Tiro.jpg" id="2_8l6wj"]
+[ext_resource type="Texture2D" uid="uid://x2frydwjplxl" path="res://meteoros/Meteoro.png" id="2_vlkng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fxbb"]
-size = Vector2(44, 44)
+size = Vector2(37, 39)
 
 [node name="Meteoro" type="Area2D" groups=["meteoro"]]
+scale = Vector2(0.52, 0.52)
 script = ExtResource("1_qxts1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
-scale = Vector2(0.741667, 0.741667)
-texture = ExtResource("2_8l6wj")
+position = Vector2(-4.76837e-07, 5.96046e-08)
+scale = Vector2(0.230175, 0.2675)
+texture = ExtResource("2_vlkng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+scale = Vector2(2.52, 2.52)
 shape = SubResource("RectangleShape2D_8fxbb")
