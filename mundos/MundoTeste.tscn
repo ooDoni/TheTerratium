@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl3ye42td8ta2"]
+[gd_scene load_steps=6 format=3 uid="uid://cl3ye42td8ta2"]
 
 [ext_resource type="PackedScene" uid="uid://dd6virlahlpv0" path="res://player/cenas/Player.tscn" id="1_igtep"]
 [ext_resource type="Script" path="res://mundos/MeteorOrigin.gd" id="2_1gneg"]
 [ext_resource type="PackedScene" uid="uid://duklb82ip48vq" path="res://scripts_gerais/bullet_catcher.tscn" id="3_3ecsk"]
 [ext_resource type="Script" path="res://mundos/score.gd" id="4_e833q"]
+[ext_resource type="PackedScene" uid="uid://diqnu5h28kgou" path="res://player/cenas/vida.tscn" id="5_fwass"]
 
 [node name="main" type="Node"]
 
@@ -34,3 +35,6 @@ offset_bottom = 74.48
 text = "Score : "
 fit_content = true
 script = ExtResource("4_e833q")
+
+[node name="vida" parent="." instance=ExtResource("5_fwass")]
+position = Vector2(1822, 962)

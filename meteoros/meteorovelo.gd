@@ -5,6 +5,8 @@ var speed = randi_range(200,300)
 var rng = RandomNumberGenerator.new()
 var life = randi_range(1,3)
 
+signal player_atingido
+
 func _process(delta):
 	position.y += delta * speed
 	rotation_degrees += 3
@@ -19,3 +21,7 @@ func _destroyed():
 	if life == 0 :
 		queue_free()
 		emit_signal("meteordestroyed")
+
+
+func _on_body_entered(body: Node2D) -> void:
+	emit_signal("player_atingido")

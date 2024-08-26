@@ -1,8 +1,10 @@
+res://player/cenas/vida.tscn
 res://mundos/MundoTeste.tscn
-res://scripts_gerais/bullet_catcher.tscn
+res://meteoros/meteorovelo.gd
 res://player/cenas/laser.tscn
 res://meteoros/Meteoro.tscn
+res://player/scripts/personagem.gd
 res://player/cenas/Player.tscn
+res://scripts_gerais/bullet_catcher.tscn
 res://interface/menu.tscn
-res://mundos/MeteorOrigin.gd
-res://meteoros/meteorovelo.gd
+res://player/cenas/vida.gd

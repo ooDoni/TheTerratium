@@ -3,14 +3,18 @@ extends CharacterBody2D
 var score = 0
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var vida = 3
 
 var gravity = 0
+
+signal player_hit(vida)
 
 func _physics_process(delta):
 	
 	var group_members = get_tree().get_nodes_in_group("meteoro")
 	for emitter in group_members:
 		emitter.connect("meteordestroyed", _on_meteor_destroyed)
+		emitter.connect("player_atingido", _damage)
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -46,3 +50,7 @@ func _physics_process(delta):
 func _on_meteor_destroyed():
 	score += 10
 	print(score)
+func _damage():
+	if(vida >= 0):
+		vida -= 1
+		emit_signal("player_hit", vida)
