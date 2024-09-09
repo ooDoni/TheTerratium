@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqdl5anaxccxa"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_4fhxh"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4fhxh")
+
+[node name="dialogo" type="Label" parent="."]
+offset_left = 452.0
+offset_top = 250.0
+offset_right = 555.0
+offset_bottom = 273.0
+text = "fsdfgdfghghh"

@@ -1,10 +1,9 @@
-res://player/cenas/vida.tscn
+res://node_2d.gd
+res://interface/dialogo.tscn
 res://mundos/MundoTeste.tscn
-res://meteoros/meteorovelo.gd
+res://scripts_gerais/bullet_catcher.tscn
 res://player/cenas/laser.tscn
 res://meteoros/Meteoro.tscn
-res://player/scripts/personagem.gd
 res://player/cenas/Player.tscn
-res://scripts_gerais/bullet_catcher.tscn
 res://interface/menu.tscn
-res://player/cenas/vida.gd
+res://player/cenas/vida.tscn
