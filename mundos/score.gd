@@ -14,4 +14,3 @@ func _process(delta):
 func _on_meteor_destroyed():
 	score += 10
 	text = str("Score: ", score)
-	print(score)

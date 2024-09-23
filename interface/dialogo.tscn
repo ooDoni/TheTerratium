@@ -1,13 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqdl5anaxccxa"]
+[gd_scene load_steps=4 format=3 uid="uid://bqdl5anaxccxa"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_4fhxh"]
+[ext_resource type="FontFile" uid="uid://dwd3um6ugjdqo" path="res://arquivos_extra/retro_computer_personal_use.ttf" id="2_q8t6x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tes51"]
+font = ExtResource("2_q8t6x")
+font_size = 37
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(0, 0, 0, 0.462745)
+shadow_offset = Vector2(3, 3)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4fhxh")
 
 [node name="dialogo" type="Label" parent="."]
-offset_left = 452.0
-offset_top = 250.0
-offset_right = 555.0
-offset_bottom = 273.0
-text = "fsdfgdfghghh"
+offset_left = 378.0
+offset_top = 229.0
+offset_right = 723.0
+offset_bottom = 298.0
+text = "PLACEHOLDER"
+label_settings = SubResource("LabelSettings_tes51")

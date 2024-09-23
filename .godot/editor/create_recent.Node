@@ -1,5 +1,5 @@
-Label
 ColorRect
+Label
 Sprite2D
 RichTextLabel
 CollisionShape2D

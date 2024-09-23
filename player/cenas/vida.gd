@@ -4,6 +4,7 @@ extends Node2D
 @onready var v2 = $vida2
 @onready var v3 = $vida3
 
+signal gameover
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -22,4 +23,4 @@ func _dano(vida):
 		v2.queue_free()
 	elif(vida == 0):
 		v3.queue_free()
-		print("gameover")
+		emit_signal("gameover")
