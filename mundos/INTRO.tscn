@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://otun6f7oa6cc"]
+
+[ext_resource type="Script" path="res://mundos/mundo_teste.gd" id="1_ao25r"]
+[ext_resource type="PackedScene" uid="uid://bqdl5anaxccxa" path="res://interface/dialogo.tscn" id="7_0306n"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_ao25r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1922.0
+offset_bottom = 1077.0
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" parent="." instance=ExtResource("7_0306n")]
+position = Vector2(962, 530)

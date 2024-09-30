@@ -6,26 +6,30 @@
 [ext_resource type="PackedScene" uid="uid://g25k1kdxth" path="res://player/cenas/laser.tscn" id="4_vnvhp"]
 [ext_resource type="Texture2D" uid="uid://cg8i3u62lxb1t" path="res://player/sprites/tiro.png" id="5_n5i8w"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl1j6"]
-size = Vector2(102, 100)
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_winm5"]
 particle_flag_disable_z = true
-emission_shape_offset = Vector3(0, 70, 0)
-angle_min = -8.99999
-angle_max = 8.00001
-inherit_velocity_ratio = 0.02
+emission_shape_offset = Vector3(0, 40, 0)
+angle_min = -5.99999
+angle_max = 6.00001
 direction = Vector3(0, 40, 0)
 spread = 36.25
-initial_velocity_max = 104.29
-radial_velocity_min = -155.42
-radial_velocity_max = 687.12
 gravity = Vector3(0, 98, 0)
 scale_min = 0.1
 scale_max = 0.2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl1j6"]
+size = Vector2(102, 100)
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["jogador"]]
 script = ExtResource("1_misse")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_winm5")
+texture = ExtResource("5_n5i8w")
+trail_lifetime = 2.0
+trail_sections = 2
+trail_section_subdivisions = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -38,7 +42,3 @@ texture = ExtResource("2_wmil1")
 position = Vector2(0, -61)
 script = ExtResource("3_qgaos")
 laser_scene = ExtResource("4_vnvhp")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-process_material = SubResource("ParticleProcessMaterial_winm5")
-texture = ExtResource("5_n5i8w")

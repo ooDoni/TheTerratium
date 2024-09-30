@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_jogar_pressed():
-	get_tree().change_scene_to_file("res://mundos/MundoTeste.tscn")
+	get_tree().change_scene_to_file("res://mundos/INTRO.tscn")
 
 
 func _on_sair_pressed():
