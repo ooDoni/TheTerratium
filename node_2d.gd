@@ -4,9 +4,20 @@ extends Node2D
 
 var falas = [""]
 
-var intro = ["No ano 4098, o planeta \n terra começa a decair",
-"A poluicão começava \n a dominar a vida",
-"Mas algo iria mudar isso"]
+var intro = [
+	"No ano 4098, o planeta \n Terra comeca a decair",
+	"A poluicao comecava \n a dominar a vida",
+	"Mas algo iria mudar isso...",
+	".",
+	"..",
+	"...",
+	"Uma planta cria consciencia",
+	"Um ser capaz de aguentar \n a missao",
+	"A missao de recuperar a vida",
+	"Seu nome? \n Plantero",
+	"Sua missao e recuperar \n uma planta para nos",
+	"Falhar nao e uma opcao",
+]
 
 var dialogo2 =[""]
 

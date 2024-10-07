@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cg8i3u62lxb1t" path="res://player/sprites/tiro.png" id="5_n5i8w"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_winm5"]
+lifetime_randomness = 1.0
 particle_flag_disable_z = true
 emission_shape_offset = Vector3(0, 40, 0)
 angle_min = -5.99999
@@ -14,26 +15,32 @@ angle_max = 6.00001
 direction = Vector3(0, 40, 0)
 spread = 36.25
 gravity = Vector3(0, 98, 0)
+linear_accel_min = 100.0
+linear_accel_max = 100.0
 scale_min = 0.1
 scale_max = 0.2
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl1j6"]
-size = Vector2(102, 100)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_47f2q"]
+points = PackedVector2Array(55, 30, 30, 50, -30, 50, -50, 20, -40, -15, 0, -60, 30, -20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["jogador"]]
 script = ExtResource("1_misse")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 2
+amount_ratio = 0.968
 process_material = SubResource("ParticleProcessMaterial_winm5")
 texture = ExtResource("5_n5i8w")
-trail_lifetime = 2.0
-trail_sections = 2
-trail_section_subdivisions = 1
+lifetime = 0.7
+fract_delta = false
+interp_to_end = 0.092
+trail_enabled = true
+trail_lifetime = 3.28
+trail_sections = 6
+trail_section_subdivisions = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_jl1j6")
+position = Vector2(1, 6)
+shape = SubResource("ConvexPolygonShape2D_47f2q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wmil1")

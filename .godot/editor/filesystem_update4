@@ -1,12 +1,11 @@
-res://interface/dialogo.tscn
 res://mundos/INTRO.tscn
 res://node_2d.gd
-res://interface/menu.tscn
-res://interface/scripts/menu.gd
 res://mundos/MundoTeste.tscn
 res://scripts_gerais/bullet_catcher.tscn
 res://player/cenas/laser.tscn
 res://meteoros/Meteoro.tscn
 res://player/cenas/vida.tscn
+res://interface/dialogo.tscn
 res://player/cenas/Player.tscn
-res://scripts_gerais/global.gd
+res://interface/menu.tscn
+res://mundos/FASE01.tscn

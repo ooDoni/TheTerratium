@@ -43,4 +43,4 @@ fit_content = true
 script = ExtResource("6_2phan")
 
 [node name="Node2D" parent="." instance=ExtResource("7_qeaar")]
-position = Vector2(498, 267)
+position = Vector2(965, 523)
