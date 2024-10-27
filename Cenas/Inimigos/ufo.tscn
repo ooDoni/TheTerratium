@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bshqcdcmb68u8"]
+
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://Cenas/Inimigos/inimigobase.tscn" id="1_i4nyg"]
+[ext_resource type="Texture2D" uid="uid://cmt2wbsg28ups" path="res://Assets/Texturas/ufo.png" id="2_8ud3j"]
+
+[node name="Enemy" instance=ExtResource("1_i4nyg")]
+speed = 500
+hp = 1
+points = 200
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(2.38419e-06, 0.172347)
+scale = Vector2(0.152941, 0.149176)
+texture = ExtResource("2_8ud3j")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 1)

@@ -1,9 +1,1 @@
-GPUParticles2D
 ColorRect
-Label
-Sprite2D
-RichTextLabel
-CollisionShape2D
-Area2D
-Node2D
-Node

@@ -1,5 +1,2 @@
-res://scripts_gerais
-res://interface
-res://player/cenas
-res://
-res://meteoros
+res://Cenas/Inimigos
+res://scripts

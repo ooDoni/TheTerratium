@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwlr7jhhhr82j"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_kyrnf"]
+[ext_resource type="Texture2D" uid="uid://dfgo50t0a2vci" path="res://Assets/Texturas/star.png" id="2_mw8np"]
+[ext_resource type="Texture2D" uid="uid://br007abtja65h" path="res://Assets/Interface/titulonvo.png" id="3_aknbb"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_db8ex"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(720, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = -1000.0
+initial_velocity_max = -1000.0
+gravity = Vector3(0, 0, 0)
+
+[node name="MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kyrnf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StarParticleEffect" type="GPUParticles2D" parent="."]
+position = Vector2(639, 5)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_db8ex")
+texture = ExtResource("2_mw8np")
+lifetime = 1.25
+preprocess = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -36.0
+offset_right = 144.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JOGAR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "JOGAR"
+
+[node name="SAIR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "SAIR"
+
+[node name="Titulonvo" type="Sprite2D" parent="."]
+position = Vector2(640, 196)
+scale = Vector2(0.408333, 0.408333)
+texture = ExtResource("3_aknbb")
+
+[connection signal="pressed" from="VBoxContainer/JOGAR" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/SAIR" to="." method="_on_sair_pressed"]
