@@ -3,11 +3,7 @@ res://Cenas/Interface/pontos.tscn
 res://Cenas/Interface/menu.tscn
 res://Cenas/Jogador/player.tscn
 res://Cenas/Interface/game_over_screen.tscn
-res://Cenas/Inimigos/meteoro.tscn
-res://Scripts/game.gd
-res://Cenas/Inimigos/ufo.tscn
-res://Scripts/enemy.gd
-res://Cenas/Inimigos/meteoros.tscn
-res://Cenas/Inimigos/girar.gd
 res://Cenas/Inimigos/inimigobase.tscn
+res://Cenas/Inimigos/ufo.tscn
+res://Cenas/Inimigos/meteoros.tscn
 res://Cenas/Jogador/laser.tscn
