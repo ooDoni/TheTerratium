@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://blp83tjfkux4"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_t35ry"]
+[ext_resource type="Texture2D" uid="uid://mlwormi30kl6" path="res://Assets/Texturas/Meteoro.png" id="2_ockqy"]
+[ext_resource type="Script" path="res://Cenas/Inimigos/girar.gd" id="3_0swvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24orn"]
+size = Vector2(127, 109)
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_t35ry")
+speed = 220
+hp = 4
+points = 175
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.301875, 0.301875)
+texture = ExtResource("2_ockqy")
+script = ExtResource("3_0swvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_24orn")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -52)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

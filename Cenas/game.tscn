@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxuuwmlma1xmm"]
+[gd_scene load_steps=15 format=3 uid="uid://bxuuwmlma1xmm"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_15kp8"]
 [ext_resource type="PackedScene" uid="uid://dv5ro1ogm4fq2" path="res://Cenas/Inimigos/meteoros.tscn" id="2_bpft8"]
 [ext_resource type="PackedScene" uid="uid://ceuh25br64vvt" path="res://Cenas/Jogador/player.tscn" id="2_oqgyc"]
 [ext_resource type="PackedScene" uid="uid://bshqcdcmb68u8" path="res://Cenas/Inimigos/ufo.tscn" id="3_6765e"]
 [ext_resource type="AudioStream" uid="uid://cyyydy05fivsp" path="res://Assets/Audios/laser.ogg" id="4_8y633"]
+[ext_resource type="PackedScene" uid="uid://dymp5p06g6d20" path="res://Cenas/Inimigos/meterosoM.tscn" id="4_ii6a1"]
 [ext_resource type="PackedScene" uid="uid://dniho73boedhe" path="res://Cenas/Interface/pontos.tscn" id="4_pq1a5"]
 [ext_resource type="AudioStream" uid="uid://137oamlwx2hu" path="res://Assets/Audios/hit.wav" id="5_f6dy0"]
+[ext_resource type="PackedScene" uid="uid://blp83tjfkux4" path="res://Cenas/Inimigos/meterosoG.tscn" id="5_lkjb3"]
 [ext_resource type="PackedScene" uid="uid://c6uejmh8c7koe" path="res://Cenas/Interface/game_over_screen.tscn" id="5_wfc6m"]
 [ext_resource type="AudioStream" uid="uid://b1wymalc4ru36" path="res://Assets/Audios/explode.wav" id="6_tmg8f"]
 [ext_resource type="Texture2D" uid="uid://dfgo50t0a2vci" path="res://Assets/Texturas/star.png" id="7_p4ya3"]
@@ -21,9 +23,22 @@ initial_velocity_min = -1000.0
 initial_velocity_max = -1000.0
 gravity = Vector3(0, 0, 0)
 
+[sub_resource type="GDScript" id="GDScript_asei2"]
+script/source = "extends Timer
+var time_life = 0
+var dif = 1
+
+func _process(delta):
+	time_life+=delta
+	if(time_life>=dif*30):
+		wait_time-=0.1
+		dif+=1
+	
+"
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_15kp8")
-enemy_scenes = Array[PackedScene]([ExtResource("2_bpft8"), ExtResource("3_6765e")])
+enemy_scenes = Array[PackedScene]([ExtResource("2_bpft8"), ExtResource("3_6765e"), ExtResource("4_ii6a1"), ExtResource("5_lkjb3")])
 
 [node name="SFX" type="Node" parent="."]
 
@@ -59,6 +74,7 @@ preprocess = 5.0
 [node name="EnemySpawnTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+script = SubResource("GDScript_asei2")
 
 [node name="Player" parent="." instance=ExtResource("2_oqgyc")]
 position = Vector2(656, 655)

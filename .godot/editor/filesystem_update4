@@ -7,3 +7,8 @@ res://Cenas/Inimigos/inimigobase.tscn
 res://Cenas/Inimigos/ufo.tscn
 res://Cenas/Inimigos/meteoros.tscn
 res://Cenas/Jogador/laser.tscn
+res://Cenas/Inimigos/meteorosmedio.tscn
+res://Cenas/Inimigos/meteorosgrande.tscn
+res://Cenas/Inimigos/meteorosM.tscn
+res://Cenas/Inimigos/meterosoM.tscn
+res://Cenas/Inimigos/meterosoG.tscn
