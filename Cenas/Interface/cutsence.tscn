@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://db6np233macjj"]
+
+[ext_resource type="Script" path="res://Cenas/Interface/cutsence.gd" id="1_ijs2b"]
+[ext_resource type="Texture2D" uid="uid://dfgo50t0a2vci" path="res://Assets/Texturas/star.png" id="2_hw14r"]
+[ext_resource type="VideoStream" path="res://Assets/Interface/cutsence.ogv" id="3_pwlgr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_db8ex"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(720, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = -1000.0
+initial_velocity_max = -1000.0
+gravity = Vector3(0, 0, 0)
+
+[node name="MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijs2b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StarParticleEffect" type="GPUParticles2D" parent="."]
+position = Vector2(639, 5)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_db8ex")
+texture = ExtResource("2_hw14r")
+lifetime = 1.25
+preprocess = 5.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="StarParticleEffect"]
+offset_left = -643.0
+offset_top = -1.0
+offset_right = 637.0
+offset_bottom = 719.0
+stream = ExtResource("3_pwlgr")
+autoplay = true
